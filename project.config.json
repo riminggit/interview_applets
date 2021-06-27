@@ -1,10 +1,10 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "interview_applets",
-  "description": "前端面试指北",
-  "appid": "touristappid",
+  "projectname": "interview_client",
+  "description": "前端面试指北客户端",
+  "appid": "wx7d24e5470337ba78",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": false,
     "enhance": false,
     "postcss": false,
@@ -30,7 +30,6 @@
       "outputPath": ""
     },
     "enableEngineNative": false,
-    "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,

@@ -5,7 +5,9 @@ import { baseUrl } from "./apiConfig"
 const htttRequest = function (url: string, paramet: object, method: any, showToast: Boolean) {
 
   // 获取token
-  const token = Taro.getStorageSync('Info')
+  const token = Taro.getStorageSync('token')
+
+  console.log(token,"token")
 
   if (showToast) {
     Taro.showLoading({
@@ -20,11 +22,11 @@ const htttRequest = function (url: string, paramet: object, method: any, showToa
       method: method,
       header: {
         'content-type': 'application/json',
-        'authorization': token.accessToken ? token.accessToken : '',
+        'authorization': token,
       }
     }).then((res) => {
       Taro.hideLoading()
-      switch (res.data.statusCode) {
+      switch (res.data.code) {
         case 200:
           return resolve(res.data)
 
@@ -39,7 +41,7 @@ const htttRequest = function (url: string, paramet: object, method: any, showToa
         default:
           setTimeout(() => {
             Taro.showToast({
-              title: res.data.comments,
+              title: res.data.msg,
               icon: 'none',
             })
           }, 500);

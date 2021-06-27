@@ -7,16 +7,17 @@ export default {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
     navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
+    navigationBarTextStyle: 'black',
   },
   tabBar: {
     color: 'rgba(68, 68, 68, 1)',
     selectedColor: 'rgba(68, 68, 68, 1)',
     backgroundColor: 'white',
+    borderStyle: process.env.TARO_ENV === 'h5' ? 'white' : 'black',
     list: [
       {
         pagePath: "pages/index/index",
-        // text: "首页",
+        text: process.env.TARO_ENV === 'h5' ? "首页":"",
         // // 未点击时显示的图片
         iconPath: "pages/static/img/index.png",
         // // 点击后显示的图片
@@ -24,7 +25,7 @@ export default {
       },
       {
         pagePath: "pages/index/index",
-        // text: "题库",
+        text: process.env.TARO_ENV === 'h5' ? "题库":"",
         // // 未点击时显示的图片
         iconPath: "pages/static/img/topic.png",
         // // 点击后显示的图片
@@ -32,7 +33,7 @@ export default {
       },
       {
         pagePath: "pages/index/index",
-        // text: "收藏",
+        text: process.env.TARO_ENV === 'h5' ? "收藏":"",
         // // 未点击时显示的图片
         iconPath: "pages/static/img/sc.png",
         // // 点击后显示的图片
@@ -41,7 +42,7 @@ export default {
 
       {
         pagePath: "pages/index/index",
-        // text: "目标",
+        text: process.env.TARO_ENV === 'h5' ? "目标":"",
         // // 未点击时显示的图片
         iconPath: "pages/static/img/tag.png",
         // // 点击后显示的图片
@@ -49,7 +50,7 @@ export default {
       },
       {
         pagePath: "pages/myPage/index",
-        // text: "我的",
+        text: process.env.TARO_ENV === 'h5' ? "我的":"",
         iconPath: "pages/static/img/my.png",
         // // 点击后显示的图片
         selectedIconPath: "pages/static/img/my_activite.png"

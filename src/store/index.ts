@@ -1,28 +1,23 @@
-import { createStore, applyMiddleware, compose } from 'redux'
-import thunkMiddleware from 'redux-thunk'
-import rootReducer from '../reducers'
+import { observable } from 'mobx'
 
-const composeEnhancers =
-  typeof window === 'object' &&
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?   
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-      // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
-    }) : compose
+const configStore = observable({
+  counter: 0,
 
-const middlewares = [
-  thunkMiddleware
-]
+  counterStore() {
+    this.counter++
+  },
+  increment() {
+    this.counter++
+  },
+  decrement() {
+    this.counter--
+  },
+  incrementAsync() {
+    setTimeout(() => {
+      this.counter++
+    }, 1000)
+  }
+})
 
-if (process.env.NODE_ENV === 'development' && process.env.TARO_ENV !== 'quickapp') {
-  middlewares.push(require('redux-logger').createLogger())
-}
+export default configStore
 
-const enhancer = composeEnhancers(
-  applyMiddleware(...middlewares),
-  // other store enhancers if any
-)
-
-export default function configStore () {
-  const store = createStore(rootReducer, enhancer)
-  return store
-}

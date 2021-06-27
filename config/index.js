@@ -1,6 +1,6 @@
 const config = {
-  projectName: 'interview_applets',
-  date: '2021-3-1',
+  projectName: 'interview_client',
+  date: '2021-6-23',
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
@@ -43,7 +43,6 @@ const config = {
     }
   },
   h5: {
-    esnextModules: ['taro-ui'],
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {
@@ -59,7 +58,8 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    esnextModules: ['taro-ui']
   }
 }
 
