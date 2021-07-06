@@ -1,0 +1,60 @@
+@import "../../../../theme/global.less";
+
+.info-card {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    position: relative;
+    box-shadow:@my-box-shadow-mini;
+
+    .info-card-content {
+        padding: 30px;
+        margin-bottom: 10px;
+
+        .info-card-title {
+            display: flex;
+            align-items: center;
+
+            .info-card-title-img {
+                height: 38px;
+                width: 38px;
+            }
+
+            .info-card-title-font {
+                margin-left: 13px;
+                font-size: 30px;
+                color: @sub-title-color;
+            }
+        }
+
+        .info-card-item-title {
+            font-size: 20px;
+            color: @sub-font-color;
+        }
+
+        .info-card-item-font {
+            line-height: normal;
+            font-size: 50px;
+        }
+
+        .info-card-content-item {
+            // margin: 12px 0;
+            width: 100%;
+        }
+
+        .info-card-topic-type {
+            // margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+
+    .info-card-footer-time {
+        font-size: 24px;
+        color: @sub-font-color;
+        margin-top: 12px;
+    }
+
+}

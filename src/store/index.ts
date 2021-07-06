@@ -1,22 +1,13 @@
 import { observable } from 'mobx'
 
 const configStore = observable({
-  counter: 0,
+  phone : '',
 
-  counterStore() {
-    this.counter++
+  changePhone (now){
+    this.phone = now
   },
-  increment() {
-    this.counter++
-  },
-  decrement() {
-    this.counter--
-  },
-  incrementAsync() {
-    setTimeout(() => {
-      this.counter++
-    }, 1000)
-  }
+
+  
 })
 
 export default configStore

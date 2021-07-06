@@ -1,5 +1,6 @@
 import Taro from "@tarojs/taro";
 import { baseUrl } from "./apiConfig"
+import { globalStore } from '../store/global'
 
 // api请求封装
 const htttRequest = function (url: string, paramet: object, method: any, showToast: Boolean) {
@@ -31,6 +32,7 @@ const htttRequest = function (url: string, paramet: object, method: any, showToa
           return resolve(res.data)
 
         case 401:
+          globalStore.changLoginStatus()
           // token校验失败
           Taro.navigateTo({
             url: '/pages/login/index'

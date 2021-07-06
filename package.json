@@ -9,7 +9,7 @@
     "css": "less"
   },
   "scripts": {
-    "build:weapp": "taro build --type weapp",
+    "build:weapp": "NODE_ENV=production taro build --type weapp",
     "build:swan": "taro build --type swan",
     "build:alipay": "taro build --type alipay",
     "build:tt": "taro build --type tt",
@@ -41,8 +41,11 @@
     "@tarojs/runtime": "3.2.13",
     "@tarojs/taro": "3.2.13",
     "@tarojs/taro-rn": "^3.2.13",
+    "echarts": "^5.1.2",
+    "echarts-taro3-react": "^1.0.13",
     "mobx": "^4.8.0",
     "mobx-react": "^6.1.4",
+    "moment": "^2.29.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-native": "^0.64.0",

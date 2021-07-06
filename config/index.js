@@ -1,3 +1,4 @@
+const path = require('path')
 const config = {
   projectName: 'interview_client',
   date: '2021-6-23',
@@ -60,7 +61,8 @@ const config = {
       }
     },
     esnextModules: ['taro-ui']
-  }
+  },
+
 }
 
 module.exports = function (merge) {

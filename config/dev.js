@@ -4,6 +4,9 @@ module.exports = {
   },
   defineConstants: {
   },
-  mini: {},
+  mini: {
+    // enableSourceMap: false,
+    // debugReact:false
+  },
   h5: {}
 }

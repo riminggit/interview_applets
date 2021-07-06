@@ -1,0 +1,50 @@
+@import "../../../../theme/global.less";
+
+.user-topic-info-card {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    box-shadow:@my-box-shadow-mini;
+    .user-topic-info-charts {
+        width: 45%;
+    }
+
+    .info-content {
+        margin: 28px 0;
+
+        .info-content-title {
+            font-size: 30px;
+            color: @sub-title-color;
+            display: flex;
+            align-items: center;
+
+            .info-content-title-font {
+                margin-left: 10px;
+            }
+
+            .info-card-title-img {
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        .info-content-explain {
+            font-size: 28px;
+            color: @markedness-font;
+        }
+
+        .info-content-btn {
+            margin-top: 10px;
+            font-size: 25px;
+            color: #fff;
+            border-radius: 20px;
+            height: 38px;
+            width: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

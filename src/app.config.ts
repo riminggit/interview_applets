@@ -56,5 +56,13 @@ export default {
         selectedIconPath: "pages/static/img/my_activite.png"
       }
     ]
-  }
+  },
+  // subPackages:[
+  //   {
+  //     root: "pages/myPage",
+  //     pages: [
+  //       "index",
+  //     ]
+  //   }
+  // ]
 }

@@ -1,0 +1,48 @@
+@import "../../theme/global.less";
+
+.small-card-function-item {
+    height: 100%;
+    width: 47vw;
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: @my-box-shadow-mini;
+
+    .small-card-function-item-content {
+        margin: 15px 35px;
+        text-align: left;
+
+        .icon {
+            height: 80px;
+
+            .icon-style {
+                height: 80px;
+                width: 80px;
+
+                @media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+                    height: 65px;
+                    width: 65px;
+                }
+            }
+        }
+
+        .title {
+            font-size: 28px;
+
+            @media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+                margin-top: 1px;
+                font-size: 24px;
+            }
+
+            margin-top: 3px;
+        }
+
+        .sub-title {
+            @media (device-height:568px) and (-webkit-min-device-pixel-ratio:2) {
+                font-size: 10px;
+            }
+
+            font-size: 18px;
+            color:@sub-title-color;
+        }
+    }
+}
