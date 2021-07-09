@@ -1,0 +1,32 @@
+@import "../../theme/global.less";
+.every-day-topic {
+  .card-common();
+  border-radius: 20px;
+  margin: @inde-page-module-margin-top auto 0;
+  min-height: 100px;
+  position: relative;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    .card_type {
+      height: 36px;
+      background: #13c2c2;
+      color: #fff;
+      font-size: 22px;
+      width: 130px;
+      border-radius: 0 12px 12px 0;
+      text-align: center;
+    }
+    .time {
+      font-size: 20px;
+      color: @sub-font-color;
+      padding-right: 20px;
+    }
+  }
+  .topic-title {
+    font-size: 24px;
+    padding: 10px 16px 20px;
+  }
+}

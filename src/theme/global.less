@@ -9,11 +9,19 @@
 @my-box-shadow-shallow:0 3px 8px -4px rgba(0,0,0,0.08),0 4px 14px 0 rgba(0,0,0,0.05),0 6px 24px 8px rgba(0,0,0,0.03);
 @my-box-shadow-mini:rgb(17 17 26 / 5%) 0px 1px 0px, rgb(17 17 26 / 10%) 0px 0px 8px;
 
+@inde-page-module-margin-top:20px;
+
+.card-common(){
+    background: #fff;
+    border-radius: 26px;
+    box-shadow:@my-box-shadow-mini;
+}
+
+// dispaly:flex
 .display-row(){
     display: flex;
     align-items: center;
 }
-
 
 .display-row-center(){
     .display-row();
