@@ -9,8 +9,13 @@ const ThemeColor = {
     purple:'#722ed1',
     Magenta:'#eb2f96',
     lime:'#a0d911',
-    gold:'#faad14'
+    gold:'#faad14',
+
+    themeLight:{
+        btnColor:''
+    }
 }
+
 
 
 export default ThemeColor

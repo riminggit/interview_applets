@@ -8,7 +8,7 @@ const htttRequest = function (url: string, paramet: object, method: any, showToa
   // 获取token
   const token = Taro.getStorageSync('token')
 
-  console.log(token,"token")
+  // console.log(token,"token")
 
   if (showToast) {
     Taro.showLoading({

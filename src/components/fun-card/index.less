@@ -1,0 +1,37 @@
+@import "../../theme/global.less";
+
+.fun-card {
+  .card-common();
+  height: 100%;
+  width: 100%;
+  padding:25px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  .fun-card-content{
+    padding: 0 12px;
+    .fun-card-icon{
+      width: 100px;
+      height: 100px;
+    }
+    .fun-card-font{
+      font-size: 26px;
+      color:@sub-title-color;
+      padding-left: 6px;
+    }
+    .explain{
+      font-size: 20px;
+      color:@sub-font-color;
+      padding-left: 6px;
+
+    }
+  }
+
+  .fun-subIcon{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 16px;
+    top: 0;
+  }
+}

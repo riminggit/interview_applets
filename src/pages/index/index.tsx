@@ -9,13 +9,14 @@ import { globalStore } from "../../store/global";
 
 import UserLoginInfoCard from "../../sections/user-login-info-card";
 import TopicInfoSections from "./sections/topic-info-sections";
-import UserFunction from "./sections/user-function";
+import ADBar from "./sections/ad-bar";
 import FunctionalZoneCard from "../../sections/functional-zone-card";
 import ThisWeekReadTopicBarEcharts from "../../sections/this-week-read-topic-bar-echarts";
 import FinishedTopicPie from "../../sections/finished-topic-pie";
 import EveryDayTopic from "../../sections/every-day-topic";
-import SwotUp from "../../sections/swot-up";
-import NecessarilyTopic from "../../sections/necessarily-topic";
+import FunCard from "../../components/fun-card";
+
+import { topicSwotUpIcon, recommendIcon3,importTopicIcon } from "../../assests/globalSvg";
 
 const taro_env = process.env.TARO_ENV;
 
@@ -43,9 +44,20 @@ const Index: React.FC = observer(() => {
       <View>
         <EveryDayTopic />
       </View>
-      <View className='before-interviews'>
-         <SwotUp/>
-         <NecessarilyTopic/>
+      <View className="before-interviews">
+        <FunCard
+          mainIcon={topicSwotUpIcon}
+          title="面试前突袭"
+          explain="赶紧刷套题压压惊吧"
+          subIcon={recommendIcon3}
+        />
+        <FunCard
+          mainIcon={importTopicIcon}
+          title="重点题专题"
+          explain="相信我,多看几遍不会吃亏"
+          styles={{ marginLeft: 8 }}
+
+        />
       </View>
       <View>
         <FinishedTopicPie />

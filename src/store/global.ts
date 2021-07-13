@@ -1,5 +1,5 @@
 import { observable , action } from 'mobx'
-import { IuserInfo } from './data.d';
+import { IuserInfo } from '../types/dataType';
 import ThemeColor from "../theme/color";
 
 class  GlobalStore {

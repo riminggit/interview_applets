@@ -11,7 +11,6 @@ const taro_env = process.env.TARO_ENV
 const MyPage: React.FC = observer(() => {
   return (
     <View className='my-page' style={{ height: taro_env === 'h5' ? 'calc(100vh - 50Px)' : '100vh' }}>
-
       <BottomFunction />
     </View>
   );

@@ -7,11 +7,13 @@ import configStore from "../../store";
 
 import moment from "moment";
 const taro_env = process.env.TARO_ENV;
-interface IProps {}
+interface IProps {
+  styles?:React.CSSProperties
+}
 export default (props: IProps) => {
   return (
-    <View className="necessarily-topic">
-    
+    <View className="necessarily-topic" style={{...props?.styles}}>
+        a 
     </View>
   );
 };

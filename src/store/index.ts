@@ -7,7 +7,6 @@ const configStore = observable({
     this.phone = now
   },
 
-  
 })
 
 export default configStore

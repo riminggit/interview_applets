@@ -53,7 +53,6 @@ export const weappLogin = (data) => {
     }
 
     weappLoginApi(params).then((res: any) => {
-
         Taro.setStorageSync('token', res.token)
         globalStore.changUserInfo(res.userInfo)
         globalStore.changLoginStatus()
