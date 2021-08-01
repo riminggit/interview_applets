@@ -1,8 +1,13 @@
 export default {
   pages: [
+    'pages/goalPage/index',
+
     'pages/index/index',
     'pages/myPage/index',
     'pages/topicStore/index',
+    'pages/collectPage/index',
+
+  
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -31,14 +36,14 @@ export default {
         selectedIconPath: "pages/static/img/topic_activite.png"
       },
       {
-        pagePath: "pages/index/index",
+        pagePath: "pages/collectPage/index",
         text: process.env.TARO_ENV === 'h5' ? "收藏":"",
         iconPath: "pages/static/img/sc.png",
         selectedIconPath: "pages/static/img/sc_activite.png"
       },
 
       {
-        pagePath: "pages/index/index",
+        pagePath: "pages/goalPage/index",
         text: process.env.TARO_ENV === 'h5' ? "目标":"",
         iconPath: "pages/static/img/tag.png",
         selectedIconPath: "pages/static/img/tag_activite.png"

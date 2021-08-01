@@ -1,0 +1,44 @@
+@import "../../../../theme/global.less";
+.mytabs {
+  .tabs {
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    margin: 0 15px;
+    .tabs-item {
+      min-width: 180px;
+      max-height: 45px;
+      padding: 20px 18px;
+      margin: 0 8px;
+      background: #fff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      color: @sub-title-color;
+      font-weight: 400;
+      .classify-item-icon {
+        height: 50px;
+        width: 50px;
+        margin-right: 10px;
+      }
+      .font-size-large {
+        font-size: 25px;
+      }
+      .font-size-small {
+        font-size: 22px;
+      }
+    }
+    .tabs-item:first-child {
+      margin-left: 0;
+    }
+  }
+  .pane{
+      
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

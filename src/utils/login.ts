@@ -1,6 +1,8 @@
 import Taro from "@tarojs/taro";
 import htttRequest from './request';
 import { globalStore } from '../store/global'
+import { dataStore } from '../store/data'
+import { queryClassify, getClassifyColor } from "./service";
 
 const taro_env = process.env.TARO_ENV
 
@@ -56,6 +58,22 @@ export const weappLogin = (data) => {
         Taro.setStorageSync('token', res.token)
         globalStore.changUserInfo(res.userInfo)
         globalStore.changLoginStatus()
+
+        // 若不存在题库分类则请求
+        if (!dataStore.classifyData) {
+            queryClassify().then((res: any) => {
+                Taro.setStorageSync("classifyData", res.data);
+                dataStore.getClassify(res.data)
+            });
+        }
+
+        if (!globalStore.classifyColor || !globalStore.colorList) {
+            getClassifyColor().then((res: any) => {
+                Taro.setStorageSync("classifyColor", res.data);
+                Taro.setStorageSync("colorList", res.color);
+                globalStore.getClassifyColor(res)
+            });
+        }
 
     })
 

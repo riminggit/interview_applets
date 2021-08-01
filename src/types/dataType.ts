@@ -1,3 +1,22 @@
+
+export interface ITypeAndClassifyCompilations {
+  [classifyName:string]:IType;
+}
+
+export interface IType {
+  count: number,
+  rows: ITypeItem[]
+}
+
+export interface ITypeItem {
+  id: number,
+  name: string,
+  classify_id?:  number,
+  is_use: number,
+  classify?:IClassifyItem,
+}
+
+
 export interface IuserInfo {
   id: number,
   nick_name: string,

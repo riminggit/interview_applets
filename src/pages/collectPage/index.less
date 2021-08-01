@@ -1,0 +1,22 @@
+@import "../../theme/global.less";
+@import "../../assests/css/base.less";
+
+.collect-store {
+  touch-action: manipulation;
+  overflow-x: hidden;
+  background: @bg-color;
+  max-height: 100vh;
+  .search-bar {
+    .at-search-bar {
+      padding:14px 18px 16px;
+    }
+  }
+  .collect-store-content {
+    margin: 18px 0;
+    .tabs-content {
+       .pane-content {
+         height:calc(100vh - 255px);
+       }
+    }
+  }
+}
