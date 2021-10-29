@@ -4,9 +4,7 @@ import "./index.less";
 import { View, Text, Image } from "@tarojs/components";
 import { globalStore } from "../../store/global";
 import configStore from "../../store";
-import { topicSwotUpIcon, recommendIcon3 } from "../../assests/globalSvg";
 
-import moment from "moment";
 const taro_env = process.env.TARO_ENV;
 interface IProps {
   styles?:React.CSSProperties,

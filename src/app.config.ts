@@ -1,13 +1,10 @@
 export default {
   pages: [
-    'pages/goalPage/index',
-
     'pages/index/index',
-    'pages/myPage/index',
     'pages/topicStore/index',
     'pages/collectPage/index',
-
-  
+    'pages/goalPage/index',
+    'pages/myPage/index',
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -50,7 +47,7 @@ export default {
       },
       {
         pagePath: "pages/myPage/index",
-        text: process.env.TARO_ENV === 'h5' ? "我的":"",
+        text: process.env.TARO_ENV === 'h5' ? "关于":"",
         iconPath: "pages/static/img/my.png",
         selectedIconPath: "pages/static/img/my_activite.png"
       }

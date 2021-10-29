@@ -33,7 +33,7 @@ export const toLogin = () => {
 
 //非小程序登陆处理
 export const noweappLoginDispose = (theEnv) => {
-    console.log(theEnv, 'theEnv')
+    // console.log(theEnv, 'theEnv')
 }
 
 //小程序登陆处理

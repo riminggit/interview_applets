@@ -41,6 +41,7 @@
     "@tarojs/runtime": "3.2.13",
     "@tarojs/taro": "3.2.13",
     "@tarojs/taro-rn": "^3.2.13",
+    "custom-calendar-taro": "^1.0.9",
     "echarts": "^5.1.2",
     "echarts-for-react": "^3.0.1",
     "echarts-taro3-react": "^1.0.13",

@@ -1,0 +1,141 @@
+@import "../../theme/global.less";
+@import "../../assests//css/base.less";
+.card-list {
+  min-height: 100px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 16px 20px;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  .card-list-header {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .card-list-goal-type {
+      color: @title-color;
+    }
+    .card-list-header-icon {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  .card-list-box {
+    .card-list-time {
+      color: @font-color;
+      font-size: 22px;
+      .card-create-time {
+        display: flex;
+        align-items: center;
+        .card-time-des {
+          margin-right: 8px;
+        }
+      }
+      .card-start-end-time {
+        display: flex;
+        align-items: center;
+        .ellipsis();
+        .card-time-des {
+          margin-right: 8px;
+        }
+        .card-strat-time {
+        }
+        .card-strat-time-interval {
+          margin: 0 8px;
+        }
+        .card-end-time {
+        }
+      }
+    }
+    .card-list-content {
+      margin-top: 15px;
+      color: @markedness-font;
+      font-size: 26px;
+      .card-list-goal-content1 {
+      }
+      .card-list-goal-content2 {
+      }
+      .card-list-goal-content3 {
+      }
+      .card-list-goal-content4 {
+      }
+      .card-list-content-font {
+        margin-bottom: 12px;
+      }
+      .at-checkbox::before {
+        border: none;
+      }
+      .at-checkbox::after {
+        border: none;
+      }
+      .at-checkbox__option-wrap::before {
+        border: none;
+      }
+      .at-checkbox__option-wrap::after {
+        border: none;
+      }
+      .at-checkbox__option {
+        padding-left: 5px;
+      }
+      .at-checkbox__option--selected {
+        padding-left: 5px;
+      }
+      .at-checkbox__option-wrap {
+        padding: 12px 32px 12px 0;
+        // .ellipsis();
+      }
+      .at-checkbox__title {
+        width: 80%;
+        display: inline-block;
+        .ellipsis();
+      }
+    }
+    .card-footer {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      .card-deadLine {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 8px;
+        .card-deadLine-content {
+          color: #f56c6c;
+          font-size: 22px;
+          font-family: KaiTi;
+          font-weight: 500;
+        }
+      }
+      .card-footer-status-icon {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .card-operate {
+    animation: flip-in-ver-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    .card-operate-content {
+      // min-height: 300px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+.card-list-icon-style {
+  width: 80px;
+  height: 80px;
+}
+
+@keyframes flip-in-ver-left {
+  0% {
+    transform: rotateY(80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}

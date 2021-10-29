@@ -1,0 +1,39 @@
+@import "../../theme/global.less";
+
+.function-correlation {
+  .function-correlation-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: @inde-page-module-margin-top;
+  }
+
+  .function-about-app {
+    .card-common();
+    margin-top: 18px;
+    height: 100%;
+    width: 100%;
+
+    .function-item {
+      padding: 0 24px;
+      .function-item-header {
+        .display-row();
+        padding: 24px 0 18px 0;
+        .function-item-icon {
+          height: 35px;
+          width: 35px;
+        }
+
+        .function-item-font {
+          margin-left: 14px;
+          font-size: 28px;
+          color: @title-color;
+          text-align: center;
+        }
+      }
+      .function-item-content {
+          padding: 0 15px 24px 15px;
+          color: @markedness-font;
+      }
+    }
+  }
+}

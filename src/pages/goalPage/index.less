@@ -1,6 +1,5 @@
 @import "../../theme/global.less";
 @import "../../assests/css/base.less";
-
 .goal-store {
   touch-action: manipulation;
   overflow-x: hidden;
@@ -18,10 +17,10 @@
     }
     .global-list {
       margin-top: 20px;
-      margin-left: 12px;
       .global-list-title {
         display: flex;
         align-items: center;
+        padding: 8px 0 8px 12px;
         .global-title-line {
           display: flex;
           align-items: center;
@@ -33,10 +32,30 @@
           display: flex;
           align-items: center;
           margin-left: 10px;
-          color: @sub-title-color;
+          color: @title-color;
           font-family: STKaiti;
         }
       }
+
+      .card-list-content-outer {
+        padding: 16px 0;
+      }
+
+      .card-list-content-outer-verticle {
+        padding: 16px 0;
+        column-count: 2;
+        column-gap: 15px;
+        .card-list-item {
+          width: 100%;
+          overflow: hidden;
+          box-sizing: border-box;
+          break-inside: avoid; //列里面的项不折断
+        }
+      }
+    }
+
+    .global-calendar {
+      margin: 18px 0;
     }
   }
 }
