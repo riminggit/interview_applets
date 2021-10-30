@@ -8,7 +8,7 @@ const taro_env = process.env.TARO_ENV
 
 //用户查询
 export async function weappLoginApi(params: any) {
-    return htttRequest('api/weappLogin', params, 'POST', true);
+    return htttRequest('api/user-login/wxLogin', params, 'POST', true);
 }
 
 //获取用户信息
