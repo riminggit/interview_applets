@@ -37,6 +37,7 @@ const weappLogin = () => {
                 getOpenId({ code: res.code })
                     .then((res: any) => {
                         Taro.setStorageSync("openId", res.openid);
+                        Taro.setStorageSync("sessionKey", res.sessionKey);
                     })
                     .catch((err) => { });
             } else {

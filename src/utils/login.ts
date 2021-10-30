@@ -52,6 +52,7 @@ export const weappLogin = (data) => {
         signature: data.signature,
         encrypteddata: data.encryptedData,
         iv: data.iv,
+        sessionKey:Taro.getStorageSync('sessionKey'),  
     }
 
     weappLoginApi(params).then((res: any) => {
