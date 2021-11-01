@@ -3,6 +3,7 @@ import htttRequest from './request';
 import { globalStore } from '../store/global'
 import { dataStore } from '../store/data'
 import { queryClassify, getClassifyColor } from "./service";
+import { weappIniteLogin } from "./webappLogin";
 
 const taro_env = process.env.TARO_ENV
 
@@ -25,7 +26,10 @@ export const getUserProfile = () => {
 export const toLogin = () => {
     const noLogin = {
         h5: () => noweappLoginDispose('h5'),
-        weapp: () => getUserProfile(),
+        weapp: async () => {
+            (!globalStore.openId || !Taro.getStorageSync('openId')) && await weappIniteLogin()
+            await getUserProfile()
+        },
         rn: () => noweappLoginDispose('rn')
     }
     noLogin[taro_env]()
@@ -39,7 +43,7 @@ export const noweappLoginDispose = (theEnv) => {
 //小程序登陆处理
 export const weappLogin = (data) => {
     let params = {
-        openid: Taro.getStorageSync('openId'),
+        openid: Taro.getStorageSync('openId') || globalStore.openId,
         come_from: 'weapp',
         nick_name: data.userInfo.nickName,
         avatar_url: data.userInfo.avatarUrl,
@@ -48,12 +52,13 @@ export const weappLogin = (data) => {
         province: data.userInfo.province,
         country: data.userInfo.country,
         language: data.userInfo.language,
-        rawdata: data.rawdata,
+        rawdata: data.rawData,
         signature: data.signature,
         encrypteddata: data.encryptedData,
         iv: data.iv,
-        sessionKey:Taro.getStorageSync('sessionKey'),  
+        sessionKey: Taro.getStorageSync('sessionKey') || globalStore.sessionKey,
     }
+
 
     weappLoginApi(params).then((res: any) => {
         Taro.setStorageSync('token', res.token)

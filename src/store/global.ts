@@ -10,6 +10,19 @@ class  GlobalStore {
     @observable classifyColor:object = Taro.getStorageSync("classifyColor")
     @observable colorList:string[] = Taro.getStorageSync("colorList")
 
+    @observable openId:string = ""
+    @observable sessionKey:string = ""
+
+    @action.bound
+    changOpenId = (data) => {
+       this.openId = data
+    }
+
+    @action.bound
+    changSessionKey = (data) => {
+       this.sessionKey = data
+    }
+
     @action.bound
     getClassifyColor = (res) => {
        this.classifyColor = res.data

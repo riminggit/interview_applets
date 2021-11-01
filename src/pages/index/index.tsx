@@ -27,7 +27,7 @@ const Index: React.FC = observer(() => {
   //  const [barCharRef,setBarCharRef] = useState()
 
   useEffect(() => {
-    taro_env === "weapp" ? weappIniteLogin() : null;
+    (taro_env === "weapp" &&  !Taro.getStorageSync('openId'))? weappIniteLogin() : null;
   }, []);
 
   return (

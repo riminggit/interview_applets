@@ -17,7 +17,7 @@ const checkWeappIslogin = () => {
     Taro.checkSession({
         success: function () {
             //session_key 未过期，并且在本生命周期一直有效
-            // weappLogin()
+            weappLogin()
         },
         fail: function () {
             // session_key 已经失效，需要重新执行登录流程
@@ -36,10 +36,14 @@ const weappLogin = () => {
             if (res.code) {
                 getOpenId({ code: res.code })
                     .then((res: any) => {
-                        Taro.setStorageSync("openId", res.openid);
-                        Taro.setStorageSync("sessionKey", res.sessionKey);
+                        globalStore.changOpenId(res.data.openid)
+                        globalStore.changSessionKey(res.data.session_key)
+                        Taro.setStorageSync("openId", res.data.openid);
+                        Taro.setStorageSync("sessionKey", res.data.session_key);
                     })
-                    .catch((err) => { });
+                    .catch((err) => {
+                        console.log(err)
+                     });
             } else {
                 console.log("登录失败！" + res.errMsg);
             }
