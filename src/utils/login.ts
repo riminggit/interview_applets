@@ -61,8 +61,8 @@ export const weappLogin = (data) => {
 
 
     weappLoginApi(params).then((res: any) => {
-        Taro.setStorageSync('token', res.token)
-        globalStore.changUserInfo(res.userInfo)
+        Taro.setStorageSync('token', res.data.token)
+        globalStore.changUserInfo(res.data.userInfo)
         globalStore.changLoginStatus()
 
         // 若不存在题库分类则请求

@@ -32,14 +32,14 @@ const weappLogin = () => {
     Taro.clearStorageSync();
     Taro.login({
         success: (res) => {
-            // 发送 res.code 到后台换取 openId, sessionKey, unionId
+            // 发送 res.code 到后台换取 openId, sessionKey, unionId,为了数据安全，不应返回sessionkey
             if (res.code) {
                 getOpenId({ code: res.code })
                     .then((res: any) => {
                         globalStore.changOpenId(res.data.openid)
-                        globalStore.changSessionKey(res.data.session_key)
+                        // globalStore.changSessionKey(res.data.session_key)
                         Taro.setStorageSync("openId", res.data.openid);
-                        Taro.setStorageSync("sessionKey", res.data.session_key);
+                        // Taro.setStorageSync("sessionKey", res.data.session_key);
                     })
                     .catch((err) => {
                         console.log(err)

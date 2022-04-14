@@ -1,0 +1,11 @@
+# Ignore artifacts:
+run
+test
+public
+node_modules/
+logs
+**/*.d.ts
+.vscode/
+
+# Ignore all HTML files:
+*.html

@@ -1,92 +1,106 @@
-@import "../../theme/global.less";
+@import '../../theme/global.less';
 
-@cardwidth : 100%;
+@cardwidth: 100%;
 .user-info-card {
-    .display-row-center();
-    height: 210px;
-    width: @cardwidth;
-    margin: 0 auto;
-    .card-common();
+  .display-row-center();
+  height: 210px;
+  width: @cardwidth;
+  margin: 0 auto;
+  .card-common();
 
-    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-        height: 230px;
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    height: 230px;
+  }
+
+  .user-content {
+    height: 200px;
+    width: 580px;
+    padding: 0 30px;
+    .display-row();
+    .user-avater {
+      // margin-left: 15px;
     }
 
-    .user-content {
-        height: 200px;
-        width: 580px;
-        padding: 0 30px;
-        .display-row();
-        .user-avater {
-            // margin-left: 15px;
+    .user-info-box {
+      margin-left: 35px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .user-name {
+        margin-top: 10px;
+         .display-row();
+
+        .user-name-text {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 300px;
         }
 
-        .user-info-box {
-            margin-left: 35px;
+        .promote {
+          height: 100%;
+          width: 90px;
+          margin-left: 20px;
+          font-size: 24px;
+          text-align: center;
+          border-radius: 24px;
+          color: #fff;
+          background: #faad14;
+          .display-row-center();
 
-            .user-name {
-                .display-row();
-
-                .user-name-text {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    max-width: 300px;
-                }
-
-                .promote {
-                    height: 100%;
-                    width: 90px;
-                    margin-left: 10px;
-                    font-size: 24px;
-                    text-align: center;
-                    border-radius: 24px;
-                    color: #fff;
-                    background: #faad14;
-                    .display-row-center();
-
-                    .promote-font {}
-                }
-            }
-
-            .level-info {
-                display: flex;
-                margin-top: 10px;
-
-                .designation {
-                    height: 100%;
-                    .display-row-center();
-                    font-size: 24px;
-                    text-align: center;
-                    border-radius: 16px;
-
-                    .designation-font {
-                        margin: 3px 18px;
-                    }
-                }
-
-                .level-bar {
-                    margin-left: 10px;
-                    width: 200px;
-                }
-            }
-
-            .user-info {
-                font-size: 30px;
-
-                .explain {
-                    margin-top: 10px;
-                    font-size: 25px;
-                    color: @title-color;
-                    opacity: 0.6;
-                }
-
-                .name-img {
-                    height: 45px;
-                    width: 45px;
-                    margin-left: 10px;
-                }
-            }
+          .promote-font {
+          }
         }
+      }
+
+      .level-info {
+        display: flex;
+        margin: 3.8% 0;
+
+        .designation {
+          height: 100%;
+          .display-row-center();
+          font-size: 24px;
+          text-align: center;
+          border-radius: 16px;
+
+          .designation-font {
+            margin: 3px 18px;
+          }
+        }
+
+        .level-bar {
+          margin-left: 10px;
+          width: 200px;
+        }
+      }
+
+      .user-info {
+        height: 100%;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .user-no-info {
+        font-size: 30px;
+      }
+
+      .explain {
+        margin-top: 15px;
+        margin-bottom: -10px;
+        font-size: 25px;
+        color: @title-color;
+        opacity: 0.6;
+      }
+
+      .name-img {
+        height: 45px;
+        width: 45px;
+        margin-left: 10px;
+      }
     }
+  }
 }
